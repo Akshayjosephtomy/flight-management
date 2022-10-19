@@ -14,12 +14,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr >
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let i of flightData">
+                    <td>{{i.id}}</td>
+                    <td>{{i.flightName}}</td>
+                    <td>{{i.origin}}</td>
+                    <td>{{i.destination}}</td>
+                    <td>{{i.capacity}}</td>
                 </tr>
                 </tbody>
             </table>

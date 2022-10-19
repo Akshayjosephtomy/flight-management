@@ -6,7 +6,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddflightComponent } from './addflight/addflight.component';
 import { ViewallflightsComponent } from './viewallflights/viewallflights.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
+const link:Routes=[
+  {
+    path:"",component:AddflightComponent
+  },
+  {
+    path:"view",component:ViewallflightsComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +26,9 @@ import { ViewallflightsComponent } from './viewallflights/viewallflights.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(link),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
